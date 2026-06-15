@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星尘矿野</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hud" aria-label="游戏状态">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <div>
+            <h1>星尘矿野</h1>
+            <p>原创像素沙盒小游戏</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="hearts" aria-label="生命值">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="tool-readout" id="toolReadout">当前：泥土</div>
+        </div>
+      </section>
+
+      <canvas id="game" width="960" height="540" aria-label="星尘矿野游戏画面"></canvas>
+
+      <section class="inventory" id="inventory" aria-label="物品栏">
+        <button class="slot active" data-key="dirt" type="button">
+          <span class="swatch dirt"></span>
+          <strong>泥土</strong>
+          <em id="count-dirt">0</em>
+        </button>
+        <button class="slot" data-key="stone" type="button">
+          <span class="swatch stone"></span>
+          <strong>月纹石</strong>
+          <em id="count-stone">0</em>
+        </button>
+        <button class="slot" data-key="wood" type="button">
+          <span class="swatch wood"></span>
+          <strong>暮枝木</strong>
+          <em id="count-wood">0</em>
+        </button>
+        <button class="slot" data-key="crystal" type="button">
+          <span class="swatch crystal"></span>
+          <strong>蓝晶矿</strong>
+          <em id="count-crystal">0</em>
+        </button>
+      </section>
+    </main>
+
+    <script type="module" src="src/game.js"></script>
+  </body>
+</html>
